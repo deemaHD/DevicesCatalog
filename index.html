@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Laptops</title>
+		<link rel="stylesheet" href = 'bower_components\bootstrap\dist\css\bootstrap.min.css'>
+		<link rel="stylesheet" href = 'css/index.css'>
+	</head>	
+	<body>
+		<h1>Оформить заказ</h1>	
+		<div class="main">
+			<p><input list="devices" placeholder="Выберите товар"></p>
+			<datalist id="devices">
+			</datalist>
+			<p><input list="devicesType" placeholder="Выберите марку"></p>
+			<datalist id="devicesType">
+			</datalist>
+			<p><input list="devicesModel" placeholder="Выберите модель"></p>
+			<datalist id="devicesModel">
+			</datalist> 
+			<input type="text" class = "login" placeholder="Enter login">
+			<input type="password" class = "password" placeholder="Enter password"><br>
+			<div class="btn-group">
+			  <button class="btn btn-primary watch" type="button" data-toggle="modal" data-target="#myModal">Просмотреть</button>
+			  <button class="btn btn-default addToCart">Добавить в корзину</button>
+			  <button class="btn btn-success payment" data-target="#myModal" data-toggle="modal">Оплатить</button>
+			</div>
+		</div>
+
+		
+		<div id="myModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header"><button class="close" type="button" data-dismiss="modal"></button>
+					<h4 class="modal-title">Ваш заказ</h4>
+					</div>
+					<div class="modal-body"></div>
+					<div class="modal-footer"><button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button></div>
+				</div>
+			</div>
+		</div>
+
+		<table class = "table table-striped close" >
+			<thead>	
+				<tr>
+					<th>Тип товара</th>
+					<th>Наименование</th>
+					<th>Модель</th>
+					<th>Цена</th>
+					<th>Заказчик</th>
+				</tr>
+			</thead>
+			<tbody>
+
+			</tbody>
+		</table>
+	<script type="text/javascript" src="bower_components\jquery\dist\jquery.min.js"></script> 
+	<script type="text/javascript" src="bower_components\bootstrap\dist\js\bootstrap.min.js"></script> 
+	<script type="text/javascript" src="app\main.js"></script>
+	<script type="text/javascript" src="app\controllers\controller.js"></script>
+	<script type="text/javascript" src="app\models\devices.js"></script>
+	<script type="text/javascript" src="app\views\view.js"></script>
+	</body>
+</html>
